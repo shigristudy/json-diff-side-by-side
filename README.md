@@ -42,6 +42,12 @@ There are three ways to access the JSON Diff tool:
 
 This extension doesn't have any specific settings.
 
+## Support the Project
+
+If you find this extension useful, consider supporting its development:
+
+<a href="https://www.paypal.com/donate/?business=shigristudy%40gmail.com&no_recurring=0"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online!"></a>
+
 ## Known Issues
 
 None at this time.
