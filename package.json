@@ -3,7 +3,7 @@
   "displayName": "JSON Diff Side-by-Side",
   "description": "A VS Code extension that provides a side-by-side view for comparing and visualizing differences between JSON files or text. Leverages VS Code's built-in diffing and JSON formatting capabilities",
   "version": "0.0.1",
-  "publisher": "shigristudy",
+  "publisher": "kabeerhussain",
   "license": "MIT",
   "repository": {
     "type": "git",
