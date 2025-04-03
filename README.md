@@ -1,71 +1,77 @@
-# json-diff-side-by-side README
+# JSON Diff Side-by-Side
 
-This is the README for your extension "json-diff-side-by-side". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension that provides a side-by-side view for comparing and visualizing differences between JSON files or text, leveraging VS Code's built-in diffing and JSON formatting capabilities.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Side-by-Side JSON Editors**: Two separate editors where you can paste or load JSON content
+- **Automatic JSON Formatting**: JSON is automatically formatted when pasted or loaded
+- **Visual Diff Comparison**: See differences between JSON structures using VS Code's built-in diff viewer
+- **Quick Access**: Icon in the activity bar for easy access to the JSON diff tool
+- **File Loading**: Easily load JSON files directly from your filesystem
+- **Error Handling**: Helpful error messages for invalid JSON
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
+### Opening the JSON Diff Viewer
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+There are three ways to access the JSON Diff tool:
+
+1. Click on the JSON Diff icon in the activity bar (left sidebar)
+2. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and search for "JSON Diff: Open Side-by-Side Diff View"
+3. Right-click in any editor and select "JSON Diff: Open Side-by-Side Diff View" from the context menu
+
+### Comparing JSON
+
+1. Open the JSON Diff viewer
+2. Paste JSON or load JSON files into the left and right editors
+3. Click the "Compare JSON" button to view the differences
+4. The JSON is automatically formatted for better readability
+
+### Loading Files
+
+1. Click the "Load File" button in either the left or right editor
+2. Select a JSON file from your file system
+3. The file content will be loaded and automatically formatted
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code 1.98.0 or higher
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension doesn't have any specific settings.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+None at this time.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Initial release of JSON Diff Side-by-Side
+- Basic JSON diffing functionality
+- Side-by-side editor view
+- JSON formatting
+- File loading capabilities
+- Activity bar integration
 
 ---
 
-## Following extension guidelines
+## Development
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+### Building the Extension
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `npm run watch` to start the compiler in watch mode
+4. Press F5 to launch the extension in debug mode
 
-## Working with Markdown
+### Packaging the Extension
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+Run `vsce package` to create a VSIX file that can be installed manually.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+### Contributing
 
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Contributions are welcome! Please feel free to submit a Pull Request.
