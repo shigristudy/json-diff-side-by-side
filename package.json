@@ -7,17 +7,100 @@
     "vscode": "^1.98.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Formatters"
   ],
-  "activationEvents": [],
+  "keywords": [
+    "json",
+    "diff",
+    "compare",
+    "side-by-side",
+    "formatter"
+  ],
+  "activationEvents": [
+    "onView:jsonDiffExplorer",
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "json-diff-side-by-side.helloWorld",
-        "title": "Hello World"
+        "command": "json-diff-side-by-side.openDiffView",
+        "title": "JSON Diff: Open Side-by-Side Diff View",
+        "category": "JSON Diff",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "json-diff-side-by-side.loadLeft",
+        "title": "Load File into Left Editor",
+        "category": "JSON Diff"
+      },
+      {
+        "command": "json-diff-side-by-side.loadRight",
+        "title": "Load File into Right Editor",
+        "category": "JSON Diff"
+      },
+      {
+        "command": "json-diff-side-by-side.compareJson",
+        "title": "Compare JSON",
+        "category": "JSON Diff"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "json-diff-explorer",
+          "title": "JSON Diff",
+          "icon": "media/json-diff-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "json-diff-explorer": [
+        {
+          "id": "jsonDiffActions",
+          "name": "JSON Diff Actions"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "jsonDiffActions",
+        "contents": "Start a new JSON Diff comparison.\n[Open JSON Diff Viewer](command:json-diff-side-by-side.openDiffView)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "json-diff-side-by-side.openDiffView"
+        },
+        {
+          "command": "json-diff-side-by-side.loadLeft",
+          "when": "false"
+        },
+        {
+          "command": "json-diff-side-by-side.loadRight",
+          "when": "false"
+        },
+        {
+          "command": "json-diff-side-by-side.compareJson",
+          "when": "false"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "json-diff-side-by-side.openDiffView",
+          "group": "navigation"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "json-diff-side-by-side.openDiffView",
+          "when": "view == jsonDiffActions",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
