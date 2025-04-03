@@ -2,6 +2,14 @@
 
 A Visual Studio Code extension that provides a side-by-side view for comparing and visualizing differences between JSON files or text, leveraging VS Code's built-in diffing and JSON formatting capabilities.
 
+## Screenshots
+
+### JSON Diff Selection Interface
+![JSON Diff Selection](media/json-diff-selection.png)
+
+### JSON Diff Result Comparison
+![JSON Diff Result](media/json-diff-result.png)
+
 ## Features
 
 - **Side-by-Side JSON Editors**: Two separate editors where you can paste or load JSON content
@@ -53,6 +61,11 @@ If you find this extension useful, consider supporting its development:
 None at this time.
 
 ## Release Notes
+
+### 0.0.2
+
+- Added screenshots to documentation
+- Improved error handling and user experience
 
 ### 0.0.1
 
